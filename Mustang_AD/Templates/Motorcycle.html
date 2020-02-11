@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="content">
+	<div class="container">
+	<div class="description">
+	<h1>MOTORCYCLES TO RENT</h1>
+	<p>Check out our range of 2018 / 2019 Crossfire, CX and honda dirt bikes below. We have wide variety of dirtbikes ranging from 150 to 250 cc </p>
+	<h2>RENT & RIDE PACKAGES: $300 PER DAY</h2>
+	<p>This includes the bike of your choice, all riding gear, gas, lunch, and an experienced trail guide to get you to the best trails for the conditions, your riding level, and desired terrain. The bikes are tuned, prepped, and transported to and from the trails. You just show up and ride. We’ll take care of the rest!</p>
+</div>
+</div>
+	<div class="container">
+		<div id="Bikes" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#Bikes" data-slide-to="0" class="active"></li>
+    <li data-target="#Bikes" data-slide-to="1"></li>
+    <li data-target="#Bikes" data-slide-to="2"></li>
+    <li data-target="#Bikes" data-slide-to="3"></li>
+    <li data-target="#Bikes" data-slide-to="4"></li>
+    <li data-target="#Bikes" data-slide-to="5"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100 img-fluid" src="{% static 'images/CF_gr7.jpg' %}" alt="Gr7">
+       <div class="carousel-caption d-none d-md-block">
+		    <h5>Crossfire GR7</h5>
+		    <pr>Crossfire GR7 is powered by 250cc liquid-cooled engine. Furthermore, the cooling system also includes a double radiator, air circulating radiators, and assisting fans with overflow coolant reservoir. Moreover, The engine can generate a max power of 30bhp and a max torque of 23Nm. Talking about the powertrain numbers, these are great numbers for a 250cc engine. With these kinds of numbers, riders should expect to get awesome pickup along with fast acceleration</pr>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100 img-fluid" src="{% static 'images/CF_RM250.jpg' %}" alt="Crossfire NC250">
+          <div class="carousel-caption d-none d-md-block">
+		    <h5>Crossfire NC250</h5>
+		    <pr>Crossfire NC250 is powered by 250cc ZS177M liquid-cooled engine. Furthermore, the cooling system also includes a double radiator, air circulating radiators, and assisting fans with overflow coolant reservoir. Moreover, this generates powertrain numbers of max power at 30BHP and max torque at 23Nm. </pr>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100 img-fluid" src="{% static 'images/CX_250R.jpg' %}" alt="CX250R">
+          <div class="carousel-caption d-none d-md-block">
+		    <h5>Crossfire GR7</h5>
+		    <pr> it is powered by a 250cc SOHC 4-valve liquid-cooled engine. The compression ratio of the bike is 11.6:1. Furthermore, the suspension duties of the bike are handled by an Inverted Hydraulic Fully Adjustable suspension at the front and Coil Spring Hydraulic fully-adjustable Shock Absorber at the rear. The fuel tank capacity of the bike is 6.5 liters which can be extended. </pr>
+  </div>
+    </div>
+     <div class="carousel-item">
+      <img class="d-block w-100 img-fluid" src="{% static 'images/honda-crf250l-rally-red.png' %}" alt="Second slide">
+          <div class="carousel-caption d-none d-md-block">
+		    <h5>CRF250</h5>
+		    <p>This is gr7 boi</p>
+  </div>
+    </div>
+     <div class="carousel-item">
+      <img class="d-block w-100 img-fluid" src="{% static 'images/CF_RM250.jpg' %}" alt="Second slide">
+          <div class="carousel-caption d-none d-md-block">
+		    <h5>CRF 250L</h5>
+		    <p>This is gr7 boi</p>
+  </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#Bikes" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#Bikes" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+  </div>
+</div>
+	</div>
+</div>
+
+{% endblock %}

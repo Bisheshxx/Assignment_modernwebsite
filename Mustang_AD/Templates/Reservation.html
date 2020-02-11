@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h2>RENTAL & RIDE PACKAGES: $300 PER DAY</h2>
+					<p>This includes the bike of your choice, all riding gear, gas, lunch, and an experienced trail guide to get you to the best trails for the conditions, your riding level, and desired terrain. The bikes are tuned, prepped, and transported to and from the trails. You just show up and ride. We’ll take care of the rest!
+					View our motorcycles for rent >> here.
+					Tours and training groups are limited to your group only for VIP service.</p>
+
+				<h2>LOCATION DATES</h2>
+				<p>
+						We offer single track guided tours and motorcycle rentals seven days a week near Wickenburg / Phoenix, Arizona from November 1st until May 15th.
+						We’re in the Pacific Northwest from our Hood River, Oregon location May through October:
+				</p>
+				</div>
+				<div class="col-md-6">
+					<h2>RESERVATIONS</h2>
+					<p>
+						To schedule your ride just fill out the form below.
+						Let us know the dates you want to ride, the bike(s) you’d like, your skill level, and the number of people in your group. We’ll confirm your reservation.
+						Alternatively, you can give Doug a call on 509-281-0156 or email GorgeMaster@gmail.com with any questions.
+
+					</p>
+					<form method="post">
+
+						{% csrf_token %}
+
+						<div class="container">
+							<div class="form-group">
+							    <label for="Name">Name:</label>
+							    <input type="text" class="form-control" placeholder="Name" id="Name" name="name">
+							  </div>
+						    <div class="form-group">
+							    <label for="email">Email address:</label>
+							    <input type="email" class="form-control" placeholder="Enter email" id="email" name="email">
+							  </div>
+							  <div class="form-group">
+							    <label for="sbj">Bike:</label>
+							    <input type="text" class="form-control" placeholder="subject" id="bike" name="bike">
+							  </div>
+							  <div class="form-group">
+							     <input class="form-control" id="strt" type="date" name="strt"></input>
+								  <label>To</label>
+								 <input class="form-control" id="end" type="date" name="end"></input>
+							  </div>
+							 <button type="submit" class="btn btn-primary">Submit</button>
+						    </div>
+
+					</form>
+				</div>
+			</div>
+				<div
+
+                 </div>
+
+          </div>
+		</div>
+	</div>
+
+{% endblock %}

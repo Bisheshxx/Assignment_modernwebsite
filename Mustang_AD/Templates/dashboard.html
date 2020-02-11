@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container">
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+							    <label for="User_email">Email:</label>
+							    <input type="text" class="form-control" placeholder="Name" name="User_email">
+            </div>
+            <div class="form-group">
+							    <label for="User_review">Review:</label>
+							    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="User_review"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Bike</th>
+                    <th scope="col">From</th>
+                    <th scope="col">Till</th>
+                </tr>
+            </thead>
+        </table>
+
+    </div>{% endblock %}

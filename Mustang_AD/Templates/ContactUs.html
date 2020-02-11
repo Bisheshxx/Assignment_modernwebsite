@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="content">
+				<p>
+				We’re based in Wickenburg in the Phoenix, Arizona area offering single-track guided moto tours and motorcycle rentals seven days a week from November 1st until April 1st. <br><br>
+				Please contact us if you have any questions about dirt bike rentals, training, and riding locations:</p>
+				<p>
+				(Se Habla Español)<br><br>
+				Phone: Doug at 509-281-0156<br><br>
+				Email: gorgemaster@gmail.com<br><br>
+				Instagram: @arizonadirtbikerentals<br>
+				</p>
+			</div>
+			</div>
+			<div class="col-md-6">
+				<form action="">
+						<div class="container">
+							<div class="form-group">
+							    <label for="Name">Name:</label>
+							    <input type="text" class="form-control" placeholder="Name" id="Name">
+							  </div>
+						    <div class="form-group">
+							    <label for="email">Email address:</label>
+							    <input type="email" class="form-control" placeholder="Enter email" id="email">
+							  </div>
+							  <div class="form-group">
+							    <label for="sbj">Subject:</label>
+							    <input type="text" class="form-control" placeholder="Subject" id="sbj">
+							  </div>
+							  <div class="form-group">
+							    <label for="msg">Your Message:</label>
+							     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+							  </div>
+							 <button type="submit" class="btn btn-dark">Submit</button>
+						    </div>
+						  </div>
+					</form>
+			</div>
+		</div>
+	</div>
+</body>
+{% endblock %}

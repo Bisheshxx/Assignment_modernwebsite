@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Mustang Adventure</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+</head>
+<body>
+	<div id="Navigationbar">
+		<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+			<div class="container">
+			  <a class="navbar-brand" href="#"><!-- <img src="logo.png"> --></a>
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav mr-auto w-100 justify-content-end">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="/Motorcycle">Motorcycles</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="/Reservation">Reservations</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="/Reviews">Reviews</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="/ContactUs">Contact</a>
+			      </li>
+
+<!--					 <li class="nav-item">-->
+<!--			        <a class="nav-link" href="/Login">Login</a>-->
+<!--						 <ul class="dropdown-menu">-->
+<!--							 <li><a href="#">Write Review</a></li>-->
+<!--         					 <li><a href="#">Read Reviews</a></li>-->
+<!--						 </ul>-->
+<!--			      </li>-->
+					{% if user.is_authenticated %}
+<!--					{{ request.user }}-->
+					<li class="nav-item">
+			        <a class="nav-link" href="/dashboard">{{ request.user }}</a>
+			      </li>
+					<li class="nav-item">
+			        <a class="nav-link" href="/logout">Logout</a>
+			      </li>
+					{% else %}
+					<li class="nav-item">
+			        <a class="nav-link" href="../login">Login</a>
+			      </li>
+					<li class="nav-item">
+			        <a class="nav-link" href="/register">Register</a>
+			      </li>
+					{% endif %}
+			    </ul>
+				   <ul class="nav navbar-nav navbar-right">
+
+    			</ul>
+
+			    <!-- <form class="form-inline my-2 my-lg-0">
+			      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			    </form> -->
+			  </div>
+			</div>
+		</nav>
+
+
+        {% block content %}
+
+        {% endblock %}
+
+        <div id="footer">
+		<footer>
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 col-sm-8 col-xs-16 segment-one">
+							<ul>
+								<li><a href="#">Home</a></li>
+								<li><a href="#">Motorcycles</a></li>
+								<li><a href="#">Reservations</a></li>
+								<li><a href="#">Gallery</a></li>
+								<li><a href="#">Reviews</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</div>
+						<div class="col-md-4 col-sm-8 col-xs-16 segment-two">
+							<h2>Contacts</h2>
+							<p>(+977)-456622</p>
+							<p>abc@gmail.com</p>
+							<p>Kathmandu,Nepal</p>
+						</div>
+						<div class="col-md-4 col-sm-8 col-xs-16 segment-three">
+							<h2>Follow Us on:</h2>
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-instagram"></i></a>
+							<a href="#"><i class="fa fa-pinterest"></i></a>
+						</div>
+<!--						<div class="col-md-3 col-sm-6 col-xs-12 segment-four">-->
+<!--							<form action="">-->
+<!--								<input type="email">-->
+<!--								<input type="submit" value="Subscribe">-->
+<!--							</form>-->
+<!--						</div>-->
+					</div>
+				</div>
+
+			</div>
+			<p class="footer-bottom-text">All Rights reserved</p>
+		</footer>
+        </div>
+        	<script type="text/javascript">
+					//Get the button:
+			mybutton = document.getElementById("myBtn");
+
+			// When the user scrolls down 20px from the top of the document, show the button
+			window.onscroll = function() {scrollFunction()};
+
+			function scrollFunction() {
+			  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			    mybutton.style.display = "block";
+			  } else {
+			    mybutton.style.display = "none";
+			  }
+			}
+
+			// When the user clicks on the button, scroll to the top of the document
+			function topFunction() {
+			  document.body.scrollTop = 0; // For Safari
+			  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+			}
+	</script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
